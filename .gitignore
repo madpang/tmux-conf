@@ -1,2 +1,5 @@
 # OS stub files
 .DS_Store
+
+# VS Code workspace files
+.vscode/
