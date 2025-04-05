@@ -1,0 +1,40 @@
+# +++ header
+# @file: tmux-conf/tmux-conf.txt
+# @brief: tmux configuration file
+# @date:
+# - created on 2024-12-13
+# - updated on 2025-04-05
+# @author:
+# - madpang
+# +++
+
+# @note: prevent tmux from creating new *log-in* sessions
+set-option -g default-command 'exec bash'
+
+# modify the escape key
+unbind C-b
+set-option -g prefix `
+bind ` send-prefix
+
+# make tmux behaves more like screen
+unbind %
+bind | split-window -h
+unbind '"'
+bind - split-window -v
+unbind w
+bind '"' choose-window
+unbind x
+bind x confirm-before -p "kill-window #W? (y/n)" kill-window
+unbind &
+bind k confirm-before -p "kill-pane #P? (y/n)" kill-pane
+unbind ,
+bind A command-prompt -I "#W" "rename-window '%%'"
+
+# set Emacs mode
+set-option -g mode-keys emacs
+
+# set status bar
+set-option -g status-position top
+
+# set larger history
+set-option -g history-limit 4096
