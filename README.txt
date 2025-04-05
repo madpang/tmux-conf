@@ -33,3 +33,15 @@ Now you can set the environment variable in `~/.profile`, tmux launched session 
 --- Keyboard
 
 I am HHKB user w/ a Emacs background, and the keybinding reflects my flavor.
+
+--- Color
+
+I have tuned the status bar color with an insipiration from the [Aston Martin Valkyrie] Hypercar---that blueish green is so cool so memorable!
++++ img
+[Aston Martin Valkyrie](media/Aston_Martin_Valkyrie.webp)
++++
+NOTE, image is obtained from the official website of Aston Martin.
+
+--- Font
+
+I am using [JetBrains Mono] font, which is a modern free and open-source typeface, what is more, I like its ligature design very much---yes, I am using ligature in terminal!

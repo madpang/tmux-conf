@@ -9,11 +9,16 @@
 # +++
 
 # @note: prevent tmux from creating new *log-in* sessions
-set-option -g default-command 'exec bash'
+set -g default-command 'exec bash'
+
+# @note: this is equivalent to set the TERM environment variable
+set -g default-terminal "tmux-256color"
+# set true color support
+set -ga terminal-overrides ',*:Tc'
 
 # modify the escape key
 unbind C-b
-set-option -g prefix `
+set -g prefix `
 bind ` send-prefix
 
 # make tmux behaves more like screen
@@ -31,10 +36,11 @@ unbind ,
 bind A command-prompt -I "#W" "rename-window '%%'"
 
 # set Emacs mode
-set-option -g mode-keys emacs
+set -g mode-keys emacs
 
 # set status bar
-set-option -g status-position top
+set -g status-position top
+set -g status-style bg="#009193",fg="#D6D6D6"
 
 # set larger history
-set-option -g history-limit 4096
+set -g history-limit 4096
