@@ -3,13 +3,13 @@
 # @brief: tmux configuration file
 # @date:
 # - created on 2024-12-13
-# - updated on 2025-04-05
+# - updated on 2025-04-06
 # @author:
 # - madpang
 # +++
 
 # @note: prevent tmux from creating new *log-in* sessions
-set -g default-command 'exec bash'
+set -g default-command 'exec pwsh'
 
 # @note: this is equivalent to set the TERM environment variable
 set -g default-terminal "tmux-256color"
